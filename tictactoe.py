@@ -42,6 +42,8 @@ class Solution:
         def pos(num):
             if num - (a + b) != a and num - (a + b) != b:
                 return num - (a + b)
+            else:
+                pass
         
         pos(6)
         pos(12)
