@@ -39,18 +39,14 @@ class Solution:
         # return type: int
 
         # TODO: Write code below to return an int with the solution to the prompt
-        def pos(num):
-            if num - (a + b) != a and num - (a + b) != b:
-                return num - (a + b)
-            else:
-                pass
-        
-        pos(6)
-        pos(12)
-        pos(15)
-        pos(18)
-        pos(24)
+        pos_cases = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
 
+        for i in pos_cases:
+            if a in i and b in i:
+                i.remove(a)
+                i.remove(b)
+                return i[0]
+        
         return 0
 
 def main():
